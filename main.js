@@ -95,9 +95,12 @@ function editUser(id) {
 }
 
 btnEd.onclick = () => {
-    if (elem.id == idx) {
-        elem.text = inpEditText.value
-    }
+    data = data.map((elem) => {
+        if (elem.id == idx) {
+            elem.text = inpEditText.value
+        }
+        return elem
+    })
     get()
     dialogEdit.close()
 }
