@@ -198,3 +198,37 @@ td {
     background-color: blue;
     color: white;
 }
+
+/* card_info */
+.card_info {
+    position: absolute;
+}
+
+
+/* dialogInfo */
+.dialogInfo {
+    width: 400px;
+    height: 120px;
+    top: 300px;
+    left: 620px;
+    position: relative;
+    border: none;
+}
+
+/* infoText */
+.infoText {
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+}
+
+.closer {
+    margin-top: 10px;
+    margin-left: 35px;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: white;
+}

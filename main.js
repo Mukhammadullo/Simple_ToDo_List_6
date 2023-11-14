@@ -4,26 +4,23 @@ let btnAdd = document.querySelector(".btnAdd")
 let dialogEdit = document.querySelector(".dialogEdit")
 let inpEditText = document.querySelector(".inpEditText")
 let btnEd = document.querySelector(".btnEd")
-let title_one = document.querySelector(".title_one")
-let time = document.querySelector(".time")
+let dialogInfo = document.querySelector(".dialogInfo")
+let infoText = document.querySelector(".infoText")
+let card_info = document.querySelector("card_info")
+let closer = document.querySelector(".closer")
 let sort = document.querySelector(".sort")
-let one = new Date()
-title_one.innerHTML = one
+let time = document.querySelector(".time")
+let title_one = document.querySelector(".title_one")
 
-// setInterval(
-//     () =>
-//         (h1.innerHTML = `<span>${new Date().toDateString()}</span> <span>${new Date().toLocaleTimeString()}</span>`),
-//     1000
-// );
+// title_date
+setInterval(() => title_one.innerHTML = new Date(), 0)
 
-let two = new Date()
-time.innerHTML = `${two.getHours()}:${two.getMinutes()}:${two.getMilliseconds()}`
-
+// time
+setInterval(() => time.innerHTML = `${new Date().getHours()} : ${new Date().getMinutes()} :${new Date().getSeconds()}`)
 
 // sort
-
 sort.onclick = () => {
-    todo = todo.sort((a, b) => a.text.localeCompare(b.text));
+    data = data.sort((a, b) => a.text.localeCompare(b.text));
     get();
 };
 
@@ -31,12 +28,12 @@ sort.onclick = () => {
 // data
 let data = [
     { id: 1, text: "Welcome to App" },
-    { id: 2, text: "Сделать уборку" },
-    { id: 3, text: "Отвести братика в садик" },
-    { id: 4, text: "Сходить на дополнительные уроки" },
-    { id: 5, text: "Сделать уроки" },
-    { id: 6, text: "Заниматься спортом" },
-    { id: 7, text: "Сходит в магазин" },
+    { id: 2, text: "Apple" },
+    { id: 3, text: "Computer" },
+    { id: 4, text: "Table" },
+    { id: 5, text: "TV" },
+    { id: 6, text: "Bag" },
+    { id: 7, text: "Shop" },
 ]
 
 
@@ -59,8 +56,12 @@ function get() {
         let btnDel = document.createElement("button")
         btnDel.innerHTML = "Delete"
         btnDel.classList.add("btnDel")
+
+
         btnDel.onclick = () => {
-            delUser(elem.id)
+            setTimeout(() => {
+                delUser(elem.id)
+            }, 2000)
         }
 
         // btnEdit
@@ -75,7 +76,10 @@ function get() {
         let capBtn = document.createElement("button")
         capBtn.classList.add("cap")
         capBtn.innerHTML = "cap"
-
+        capBtn.onclick = () => {
+            dialogInfo.showModal()
+            infoText.innerHTML = elem.text
+        }
 
         let card = document.createElement("div")
         card.append(btnDel, btnEdit, capBtn)
@@ -105,7 +109,7 @@ function delUser(id) {
 // btnAdd
 btnAdd.onclick = () => {
     let newUser = {
-        id: new Date().getMilliseconds(),
+        id: data.length + 1,
         text: inpText.value
     }
     data.push(newUser)
@@ -132,4 +136,9 @@ btnEd.onclick = () => {
     })
     get()
     dialogEdit.close()
-}   
+}
+
+
+closer.onclick = () => {
+    dialogInfo.close()
+}
