@@ -232,3 +232,14 @@ td {
     background-color: blue;
     color: white;
 }
+
+/* search */
+.search {
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    font-size: 18px;
+    outline: none;
+}

@@ -11,6 +11,9 @@ let closer = document.querySelector(".closer")
 let sort = document.querySelector(".sort")
 let time = document.querySelector(".time")
 let title_one = document.querySelector(".title_one")
+let remove = document.querySelector(".remove")
+
+
 
 // title_date
 setInterval(() => title_one.innerHTML = new Date(), 0)
