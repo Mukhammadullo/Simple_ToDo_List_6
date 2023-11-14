@@ -2,7 +2,7 @@ let tbody = document.querySelector(".tbody")
 let inpText = document.querySelector(".inpText")
 let btnAdd = document.querySelector(".btnAdd")
 let dialogEdit = document.querySelector(".dialogEdit")
-
+let inpEditText = document.querySelector(".inpEditText")
 // data
 let data = [
     { id: 1, text: "Welcome to App" },
@@ -35,9 +35,13 @@ function get() {
             delUser(elem.id)
         }
 
-
+        // btnEdit
         let btnEdit = document.createElement("button")
         btnEdit.innerHTML = "Edit"
+        btnEdit.onclick = () => {
+            editUser(elem.id)
+        }
+
 
         let capBtn = document.createElement("button")
         capBtn.innerHTML = "cap"
@@ -77,4 +81,13 @@ btnAdd.onclick = () => {
     data.push(newUser)
     inpText.value = ""
     get()
+}
+
+
+// Edit
+let idx = null
+function editUser(id) {
+    dialogEdit.showModal()
+    let user = data.find((elem) => elem.id)
+    text = text.value
 }
