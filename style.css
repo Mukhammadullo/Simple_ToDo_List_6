@@ -1,31 +1,200 @@
+/*  background-color: rgb(117, 66, 8); inptetxt              */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(247, 185, 16, 0.8);
+}
+
+/* title_one */
+
 .card2 {
     width: 80%;
-    height: auto;
-    border: 1px solid red;
+    height: 90vh;
+    margin: auto;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 18px black;
+}
+
+.card3 {
+    width: 80%;
     margin: auto;
 }
+
 
 table {
     border-collapse: collapse;
     width: 80%;
     height: auto;
-    border: 1px solid red;
     margin: auto;
+    background-color: rgb(57, 50, 63);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
 }
 
 thead {
+    font-size: 18px;
+    color: rgb(36, 224, 36);
     border: 1px solid red;
 }
 
 th {
-    border: 1px solid red;
+    border: 2px solid rgb(196, 251, 93);
 }
 
 tr {
+    text-align: center;
     height: 40px;
     border: 1px solid red;
 }
 
 td {
     border: 2px solid rgb(196, 251, 93);
+}
+
+/* title_one */
+.title_one {
+    text-align: center;
+    color: rgb(32, 215, 32);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* time */
+.time {
+    text-align: center;
+    color: rgb(32, 215, 32);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(117, 66, 8);
+}
+
+/* inpText */
+.inpText {
+    width: 78%;
+    height: 38px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 80px;
+    background-color: rgb(117, 66, 8);
+    outline: none;
+    padding: 5px;
+    font-size: 18px;
+}
+
+/* btnAdd */
+.btnAdd {
+    width: 50px;
+    height: 47px;
+    border: none;
+    background-color: yellow;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 16px;
+}
+
+
+
+/* btns_two */
+.btns_two {
+    width: 55%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* remove */
+.remove {
+    width: 140px;
+    height: 38px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: blue;
+}
+
+/* sort */
+.sort {
+    width: 80px;
+    height: 38px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(10, 181, 10);
+    font-size: 16px;
+}
+
+/* btnDel */
+.btnDel {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 5px;
+    background-color: red;
+}
+
+/* btnEdit */
+.btnEdit {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 5px;
+    background-color: rgb(146, 253, 58);
+}
+
+/* cap */
+.cap {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 5px;
+    background-color: rgb(199, 183, 9);
+}
+
+
+
+/* card-edit */
+.card_edit {
+    position: absolute;
+}
+
+.dialogEdit {
+    width: 400px;
+    height: 120px;
+    top: 370px;
+    left: 700px;
+    position: relative;
+    border: none;
+}
+
+/* inpEdit */
+.inpEditText {
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 5px;
+}
+
+/* btnEd */
+
+.btnEd {
+    margin-top: 10px;
+    margin-left: 35px;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: white;
 }

@@ -4,6 +4,30 @@ let btnAdd = document.querySelector(".btnAdd")
 let dialogEdit = document.querySelector(".dialogEdit")
 let inpEditText = document.querySelector(".inpEditText")
 let btnEd = document.querySelector(".btnEd")
+let title_one = document.querySelector(".title_one")
+let time = document.querySelector(".time")
+let sort = document.querySelector(".sort")
+let one = new Date()
+title_one.innerHTML = one
+
+// setInterval(
+//     () =>
+//         (h1.innerHTML = `<span>${new Date().toDateString()}</span> <span>${new Date().toLocaleTimeString()}</span>`),
+//     1000
+// );
+
+let two = new Date()
+time.innerHTML = `${two.getHours()}:${two.getMinutes()}:${two.getMilliseconds()}`
+
+
+// sort
+
+sort.onclick = () => {
+    todo = todo.sort((a, b) => a.text.localeCompare(b.text));
+    get();
+};
+
+
 // data
 let data = [
     { id: 1, text: "Welcome to App" },
@@ -26,12 +50,15 @@ function get() {
         let id = document.createElement("td")
         id.innerHTML = elem.id
 
+
         let text = document.createElement("td")
         text.innerHTML = elem.text
+
 
         // btnDel
         let btnDel = document.createElement("button")
         btnDel.innerHTML = "Delete"
+        btnDel.classList.add("btnDel")
         btnDel.onclick = () => {
             delUser(elem.id)
         }
@@ -39,12 +66,14 @@ function get() {
         // btnEdit
         let btnEdit = document.createElement("button")
         btnEdit.innerHTML = "Edit"
+        btnEdit.classList.add("btnEdit")
         btnEdit.onclick = () => {
             editUser(elem.id)
         }
 
 
         let capBtn = document.createElement("button")
+        capBtn.classList.add("cap")
         capBtn.innerHTML = "cap"
 
 
@@ -103,4 +132,4 @@ btnEd.onclick = () => {
     })
     get()
     dialogEdit.close()
-}
+}   

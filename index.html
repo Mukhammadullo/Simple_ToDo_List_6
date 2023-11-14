@@ -14,26 +14,44 @@
 
     <div class="card2">
 
-        <input type="text" placeholder="Add task" class="inpText">
-        <button class="btnAdd">Add</button>
+        <div class="card3">
 
-        <!-- table -->
-        <table>
-            <!-- thead -->
-            <thead>
-                <th>ID</th>
-                <th>Text</th>
-                <th>Button</th>
-            </thead>
-            <!-- tbody -->
-            <tbody class="tbody"></tbody>
-        </table>
+            <!-- date -->
+            <h1 class="title_one"></h1>
+            <!-- time -->
+            <h2 class="time"></h2>
+
+            <input type="text" placeholder="Add task" class="inpText">
+            <button class="btnAdd">Add</button>
+            <br><br>
+
+
+            <div class="btns_two">
+                <button class="remove">Remove Duplicat</button>
+                <button class="sort">Sort</button>
+            </div>
+            <!-- table -->
+            <table>
+                <!-- thead -->
+                <thead>
+                    <th>ID</th>
+                    <th>Text</th>
+                    <th>Button</th>
+                </thead>
+                <!-- tbody -->
+                <tbody class="tbody"></tbody>
+            </table>
+        </div>
     </div>
 
-    <dialog class="dialogEdit">
-        <input type="text" class="inpEditText">
-        <button class="btnEd">Edit</button>
-    </dialog>
+
+    <div class="card_edit">
+        <dialog class="dialogEdit">
+            <input type="text" class="inpEditText">
+            <br>
+            <button class="btnEd">Edit</button>
+        </dialog>
+    </div>
 
     <script src="main.js"></script>
 </body>
