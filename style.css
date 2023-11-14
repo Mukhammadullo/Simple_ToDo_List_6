@@ -1,0 +1,31 @@
+.card2 {
+    width: 80%;
+    height: auto;
+    border: 1px solid red;
+    margin: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    height: auto;
+    border: 1px solid red;
+    margin: auto;
+}
+
+thead {
+    border: 1px solid red;
+}
+
+th {
+    border: 1px solid red;
+}
+
+tr {
+    height: 40px;
+    border: 1px solid red;
+}
+
+td {
+    border: 2px solid rgb(196, 251, 93);
+}
