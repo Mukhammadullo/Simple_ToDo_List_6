@@ -13,6 +13,21 @@ let time = document.querySelector(".time")
 let title_one = document.querySelector(".title_one")
 let remove = document.querySelector(".remove")
 
+// sort
+let search = document.querySelector(".search")
+sort.onclick = () => {
+    data = data.sort((a, b) => a.text.localeCompare(b.text));
+    get(data);
+};
+
+
+// search
+search.oninput = () => {
+    let data2 = data.filter((elem) => {
+        return elem.text.toLowerCase().trim().includes(search.value.toLowerCase().trim())
+    })
+    get(data2)
+}
 
 
 // title_date
@@ -21,16 +36,12 @@ setInterval(() => title_one.innerHTML = new Date(), 0)
 // time
 setInterval(() => time.innerHTML = `${new Date().getHours()} : ${new Date().getMinutes()} :${new Date().getSeconds()}`)
 
-// sort
-sort.onclick = () => {
-    data = data.sort((a, b) => a.text.localeCompare(b.text));
-    get();
-};
+
 
 
 // data
 let data = [
-    { id: 1, text: "Welcome to App" },
+    { id: 1, text: "Welcome to App"},
     { id: 2, text: "Apple" },
     { id: 3, text: "Computer" },
     { id: 4, text: "Table" },
@@ -41,7 +52,7 @@ let data = [
 
 
 // get
-function get() {
+function get(data) {
     tbody.innerHTML = ""
     data.forEach((elem) => {
 
@@ -96,7 +107,7 @@ function get() {
 
     })
 }
-get()
+get(data)
 
 
 
@@ -105,7 +116,7 @@ function delUser(id) {
     data = data.filter((elem) => {
         return elem.id != id
     })
-    get()
+    get(data)
 }
 
 
@@ -117,7 +128,7 @@ btnAdd.onclick = () => {
     }
     data.push(newUser)
     inpText.value = ""
-    get()
+    get(data)
 }
 
 
@@ -137,7 +148,7 @@ btnEd.onclick = () => {
         }
         return elem
     })
-    get()
+    get(data)
     dialogEdit.close()
 }
 
