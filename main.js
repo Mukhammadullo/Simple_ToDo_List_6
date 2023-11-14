@@ -41,7 +41,7 @@ setInterval(() => time.innerHTML = `${new Date().getHours()} : ${new Date().getM
 
 // data
 let data = [
-    { id: 1, text: "Welcome to App"},
+    { id: 1, text: "Welcome to App" },
     { id: 2, text: "Apple" },
     { id: 3, text: "Computer" },
     { id: 4, text: "Table" },
