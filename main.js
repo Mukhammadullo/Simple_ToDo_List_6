@@ -3,6 +3,7 @@ let inpText = document.querySelector(".inpText")
 let btnAdd = document.querySelector(".btnAdd")
 let dialogEdit = document.querySelector(".dialogEdit")
 let inpEditText = document.querySelector(".inpEditText")
+let btnEd = document.querySelector(".btnEd")
 // data
 let data = [
     { id: 1, text: "Welcome to App" },
@@ -89,5 +90,14 @@ let idx = null
 function editUser(id) {
     dialogEdit.showModal()
     let user = data.find((elem) => elem.id)
-    text = text.value
+    inpEditText.value = user.text
+    idx = id
+}
+
+btnEd.onclick = () => {
+    if (elem.id == idx) {
+        elem.text = inpEditText.value
+    }
+    get()
+    dialogEdit.close()
 }
