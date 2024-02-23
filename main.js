@@ -13,6 +13,17 @@ let time = document.querySelector(".time")
 let title_one = document.querySelector(".title_one")
 let remove = document.querySelector(".remove")
 
+
+// dubplicat
+// remove.onclick = () => {
+//     data = data.filter((elem) =>
+//         elem.text == elem.text
+//     )
+//     get(data)
+// }
+
+
+
 // sort
 let search = document.querySelector(".search")
 sort.onclick = () => {
@@ -28,6 +39,8 @@ search.oninput = () => {
     })
     get(data2)
 }
+
+
 
 
 // title_date
